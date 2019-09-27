@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Calculator_V2._0
 {
-    public partial class Form1 : Form
+    public partial class FormCalculator : Form
     {
         double resultS = 0;
         double resultE = 0;
@@ -30,7 +30,9 @@ namespace Calculator_V2._0
 
         const int MAX_FACTORIAL = 170;
 
-        public Form1()
+        string path = @"C:\Users\Vitaliy\Desktop\ReviewsAndComment.txt";
+
+        public FormCalculator()
         {
            InitializeComponent();
 
@@ -208,13 +210,16 @@ namespace Calculator_V2._0
 
         private void Button66_Click(object sender, EventArgs e)
         {
-            FileStream file = new FileStream(@"C:\Users\Vitaliy\Desktop\ReviewsAndComment.txt", FileMode.Create); //создаем файловый поток
+            FileStream file = new FileStream(path, FileMode.Create); //создаем файловый поток
             StreamWriter writerPasswordEncrypt = new StreamWriter(file); //создаем «потоковый писатель» и связываем его с файловым потоком
             writerPasswordEncrypt.Write($"{textBox1.Text}"); //записываем в файл
             writerPasswordEncrypt.Close();
 
+            Form2 settingsForm = new Form2();
+
+            settingsForm.Show();
+
             textBox1.Clear();
-            textBox1.Text = "Спасибо за ваш отзыв (:";
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -297,6 +302,7 @@ namespace Calculator_V2._0
             if (screenEngeneer.Text == "")
             {
                 screenEngeneer.Text = "0";
+
             }
         }
 
@@ -568,10 +574,11 @@ namespace Calculator_V2._0
             screenEngeneer.Text = Convert.ToString(i, 2);
         }
 
-        
-
-
-
+        private void Button67_Click(object sender, EventArgs e)
+        {
+            path = @""+PathBox.Text+@"\ReviewsAndComment.txt";
+            PathBox.Clear();
+        }
     }
 
 

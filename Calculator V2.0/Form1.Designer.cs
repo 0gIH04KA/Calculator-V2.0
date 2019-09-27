@@ -1,6 +1,6 @@
 ﻿namespace Calculator_V2._0
 {
-    partial class Form1
+    partial class FormCalculator
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCalculator));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.typeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Standart = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,10 +113,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.PathBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
+            this.button67 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBoxStandart.SuspendLayout();
             this.groupBoxEngineering.SuspendLayout();
@@ -1022,14 +1026,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.PathBox);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.button67);
             this.groupBox1.Controls.Add(this.button66);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(1123, 27);
@@ -1089,6 +1096,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Calculator v2.0";
             // 
+            // PathBox
+            // 
+            this.PathBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.PathBox.Location = new System.Drawing.Point(13, 163);
+            this.PathBox.Name = "PathBox";
+            this.PathBox.Size = new System.Drawing.Size(329, 23);
+            this.PathBox.TabIndex = 2;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(13, 258);
@@ -1118,6 +1133,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Отзывы и пожелания";
             // 
+            // button67
+            // 
+            this.button67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button67.Location = new System.Drawing.Point(230, 192);
+            this.button67.Name = "button67";
+            this.button67.Size = new System.Drawing.Size(112, 32);
+            this.button67.TabIndex = 1;
+            this.button67.Text = "ОК";
+            this.button67.UseVisualStyleBackColor = true;
+            this.button67.Click += new System.EventHandler(this.Button67_Click);
+            // 
             // button66
             // 
             this.button66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -1129,7 +1155,17 @@
             this.button66.UseVisualStyleBackColor = true;
             this.button66.Click += new System.EventHandler(this.Button66_Click);
             // 
-            // Form1
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(16, 143);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 17);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Изменить путь сохранения ";
+            // 
+            // FormCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1139,8 +1175,9 @@
             this.Controls.Add(this.groupBoxStandart);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "FormCalculator";
             this.Text = "Calculator v2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -1246,6 +1283,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button66;
+        private System.Windows.Forms.TextBox PathBox;
+        private System.Windows.Forms.Button button67;
+        private System.Windows.Forms.Label label8;
     }
 }
 
